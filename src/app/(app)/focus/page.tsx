@@ -1,11 +1,12 @@
 'use client';
-import React from 'react';
 
+import DesktopBanner from '@/components/waitlist/desktop-banner';
 import AppContainer from '@/components/app-container';
 
 const FocusPage = () => {
   return (
     <>
+      <DesktopBanner />
       <AppContainer />
     </>
   );

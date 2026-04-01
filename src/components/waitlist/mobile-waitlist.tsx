@@ -57,7 +57,7 @@ const MobileWaitlist = () => {
             <DialogTrigger asChild>
               <button className="flex items-center gap-2 rounded-full bg-[#505C3D] px-4 py-3 text-white shadow-lg">
                 <TabletSmartphone size={18} />
-                Mobile App Waitlist
+                Desktop App Waitlist
               </button>
             </DialogTrigger>
             <button
@@ -93,7 +93,7 @@ const MobileWaitlist = () => {
                 <DialogHeader>
                   <DialogTitle>Join the waitlist</DialogTitle>
                   <DialogDescription>
-                    Be the first to know when our mobile app launches. Early users will get
+                    Be the first to know when our desktop app launches. Early users will get
                     exclusive benefits.
                   </DialogDescription>
                 </DialogHeader>
