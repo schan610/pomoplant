@@ -24,8 +24,8 @@ const DesktopPreviewPage = () => {
           </p>
           <ul className="mt-2 max-w-2xl list-inside list-disc space-y-2 text-center text-muted-foreground md:text-left">
             <li>
-              <strong>Mini player:</strong> always-on-top view keeps your timer visible while you
-              work
+              <strong>Floating widget:</strong> always-on-top view keeps your timer visible while
+              you work
             </li>
             <li>
               <strong>Autoplay:</strong> automatically start your next session if you want
