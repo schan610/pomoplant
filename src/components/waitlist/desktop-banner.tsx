@@ -12,16 +12,13 @@ const DesktopBanner = () => {
     <div className="border-b bg-muted py-4">
       <Container className="flex items-center justify-between text-muted-foreground">
         <div className="flex flex-1 flex-col items-center gap-2 text-center text-sm">
-          <span>
-            🚀 Our desktop app is coming soon, get a sneak peek here — we’d love your input
-          </span>
-
+          <span>Download our Windows desktop app to get the full experience!</span>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="/desktop-preview"
+              href="/download-windows"
               className="underline hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              View a sneak peek
+              Download for Windows
             </a>
             <a
               target="_blank"

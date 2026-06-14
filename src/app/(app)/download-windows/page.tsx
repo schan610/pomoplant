@@ -1,21 +1,21 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import Container from '@/components/ui/container';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import { Download } from 'lucide-react';
 
+import { Button } from '@/components/ui/button';
+import Container from '@/components/ui/container';
 const screenshots = [
   { src: '/desktop-preview/focus-preview.png', alt: 'Desktop App Screenshot 1' },
   { src: '/desktop-preview/settings-preview.png', alt: 'Desktop App Screenshot 2' },
 ];
 
-const DesktopPreviewPage = () => {
+const DownloadWindowsPage = () => {
   return (
     <div className="min-h-screen bg-muted py-12">
       <Container className="flex flex-col items-center gap-16">
         <div>
-          <h1 className="text-center text-4xl font-bold">Sneak Peek: Our Upcoming Desktop App</h1>
+          <h1 className="text-center text-4xl font-bold">Early Access: Windows Desktop App</h1>
           <p className="mt-4 text-center text-2xl font-medium text-muted-foreground">
             Our desktop app offers a smoother, more reliable experience for your focus sessions.
           </p>
@@ -35,6 +35,12 @@ const DesktopPreviewPage = () => {
             </li>
           </ul>
         </div>
+        <Button size={'lg'} asChild>
+          <Link href={'/downloads/Pomoplant_0.1.0_x64_en-US.msi'}>
+            <Download />
+            Download for Windows
+          </Link>
+        </Button>
         {/* Screenshots */}
         <div className="flex w-full flex-col justify-center gap-8 md:flex-row">
           {screenshots.map((img) => (
@@ -72,4 +78,4 @@ const DesktopPreviewPage = () => {
   );
 };
 
-export default DesktopPreviewPage;
+export default DownloadWindowsPage;
