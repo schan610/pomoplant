@@ -9,7 +9,7 @@ export async function GET(
   console.log(`Update: ${target} ${arch} ${current_version}`);
   console.log(current_version);
   console.log(target);
-  const latestVersion = '0.2.0';
+  const latestVersion = '0.1.0';
   const pubDate = '2026-06-14T17:09:49+00:00';
   const hasUpdate = semver.lt(current_version, latestVersion);
 
@@ -18,13 +18,13 @@ export async function GET(
   }
 
   return Response.json({
-    version: '0.2.0',
-    notes: 'Testing update 0.2.0',
+    version: latestVersion,
+    notes: `Testing update ${latestVersion}`,
     pub_date: pubDate,
     platforms: {
       'windows-x86_64': {
         signature:
-          'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTTXlZTlYvekZKU25XSncwM2FUMmFNYkVUTnFZMGJ2ajZCREl4UlRKQVZoYkVtYzVnazY1QTB6bVVxTE5CVVUxbTAvRXZVNGkycmpXQjN0MGgvNVUxb3lCOFNiSUpxK0FNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjE5MTE2CWZpbGU6UG9tb3BsYW50XzAuMS4wX3g2NF9lbi1VUy5tc2kKZXhDLzVMV2JVVXU2cFFLcGo0L3RiWGVseWhPSTVVdW9hYUpnTDFRY2x2N2o4NUhXYlgzMHk2M2dxWGwycmxXU1pkaUJIZG84bVVsWHl1L2UrTlB3Q0E9PQo=',
+          'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTTXlZTlYvekZKU214anlIaWVwcktFVUQvMnBlbnVZNkpNZE15SDVXYzM1ZWRtczluNC9Ia2k3UG1EcEZMN2FkMk53UElDOEVlTE1RZS9QQS91enFscFdac1REV1NyUEE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNTYzNTg5CWZpbGU6UG9tb3BsYW50XzAuMS4wX3g2NF9lbi1VUy5tc2kKUXpjaGd0UHdZbDg4dVJPazVHMUkxbzFMczFCYWd1c0UyZWhZcm5VTkx4Qm5yMEUwSDY3QzA2QVdsdE9HQ2wvdjVkb2lnay83NC9kSTNYQ2xPaFkxQ0E9PQo=',
         url: 'https://pomoplant.io/downloads/Pomoplant_0.1.0_x64_en-US.msi',
       },
     },
