@@ -11,7 +11,7 @@ const Footer = () => {
           <SocialsList />
           <Separator className="bg-[#c2c9b6]" />
           <span className="mt-6 text-xs text-gray-700">
-            © 2025 Pomoplant by Rinakin. All rights reserved.
+            © 2026 Pomoplant by Rinakin. All rights reserved.
           </span>
         </div>
       </Container>
