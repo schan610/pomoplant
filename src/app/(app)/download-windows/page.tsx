@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Download } from 'lucide-react';
 
+import { DOWNLOAD_URL } from '@/lib/constants';
+
 import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 const screenshots = [
@@ -36,7 +38,7 @@ const DownloadWindowsPage = () => {
           </ul>
         </div>
         <Button size={'lg'} asChild>
-          <Link href={'/downloads/Pomoplant_0.3.0_x64_en-US.msi'}>
+          <Link href={DOWNLOAD_URL}>
             <Download />
             Download for Windows
           </Link>
