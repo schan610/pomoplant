@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <>
       <MobileWaitlist />
-      {/* <DesktopBanner /> */}
+      <DesktopBanner />
       <AppContainer />
       <div className="bg-[#f2f5e0]">
         <HowItWorks />

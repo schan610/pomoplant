@@ -19,6 +19,7 @@ import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 
 const MobileWaitlist = () => {
+  const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -52,8 +53,8 @@ const MobileWaitlist = () => {
   return (
     <>
       <div className="fixed bottom-6 right-6 z-50">
-        <Dialog>
-          <div className="relative duration-200 ease-in-out hover:scale-105">
+        <Dialog open={open} onOpenChange={setOpen}>
+          <div className="relative">
             <DialogTrigger asChild>
               <button className="flex items-center gap-2 rounded-full bg-[#505C3D] px-4 py-3 text-white shadow-lg">
                 <TabletSmartphone size={18} />
@@ -61,8 +62,11 @@ const MobileWaitlist = () => {
               </button>
             </DialogTrigger>
             <button
-              onClick={() => setIsVisible(false)}
-              className="shadow-mdhover:bg-gray-300 absolute -right-2 -top-2 z-10 flex h-6 w-6 items-center justify-center rounded-full border bg-gray-200 text-base text-gray-600 hover:bg-gray-300"
+              onClick={() => {
+                setOpen(false);
+                setIsVisible(false);
+              }}
+              className="absolute -right-2 -top-2 z-10 flex h-6 w-6 items-center justify-center rounded-full border bg-gray-200 text-base text-gray-600 shadow-md hover:bg-gray-300"
               aria-label="Close"
             >
               ×
