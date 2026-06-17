@@ -36,7 +36,7 @@ const DownloadWindowsPage = () => {
           </ul>
         </div>
         <Button size={'lg'} asChild>
-          <Link href={'/downloads/Pomoplant_0.1.0_x64_en-US.msi'}>
+          <Link href={'/downloads/Pomoplant_0.3.0_x64_en-US.msi'}>
             <Download />
             Download for Windows
           </Link>
