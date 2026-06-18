@@ -1,4 +1,5 @@
 import { type NextRequest } from 'next/server';
+import { DOWNLOAD_URL, LATEST_VERSION } from '@/lib/constants';
 import semver from 'semver';
 
 export async function GET(
@@ -9,8 +10,8 @@ export async function GET(
   console.log(`Update: ${target} ${arch} ${current_version}`);
   console.log(current_version);
   console.log(target);
-  const latestVersion = '0.3.0';
-  const pubDate = '2026-06-14T17:09:49+00:00';
+  const latestVersion = LATEST_VERSION;
+  const pubDate = '2026-06-18T05:10:50+00:00';
   const hasUpdate = semver.lt(current_version, latestVersion);
 
   if (!hasUpdate) {
@@ -24,8 +25,8 @@ export async function GET(
     platforms: {
       'windows-x86_64': {
         signature:
-          'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTTXlZTlYvekZKU2pYOUIyeTRyRWU3cDZGVWkza28xeUlIaVkySWdvUDZYYWF5akF1NFl1Z1dEakQyelI0WjlrNHpHR3d4aWQwbUF0SGNHODBIaGNsKzlpdGVsOEtDYlFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNjU3ODI0CWZpbGU6UG9tb3BsYW50XzAuMy4wX3g2NF9lbi1VUy5tc2kKbEthV3RacjZXT1NzdTY5V3ZJdFpxMWVOcGZGS3VzMmhZdDE4N3R2VTY4bzlKNmNwVEMwcVA3VlJ2VXhLV3NVM0JVcEYyK0J4VTVGb2dVVmNiVE83QlE9PQo=',
-        url: 'https://pomoplant.io/downloads/Pomoplant_0.3.0_x64_en-US.msi',
+          'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTTXlZTlYvekZKU3RRSnZDY3dXWE9XK09ZdkVVcmtEUGx0OFI1b3ZFbGdwT015d1BEZEE1SklXeDRpOTE0MU0wdU9iWHlJSHcySjJEcjVKYjYrVGoxMDJESkFFbFRKbWdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNzYyNTgyCWZpbGU6UG9tb3BsYW50XzAuMy4xX3g2NF9lbi1VUy5tc2kKb2RhdEhrRnBtQzlSeFBrbFE3YTJUN0RvRmxMemdJMlh2OGNOb2hEdTJtWVYvUk9nb05odzFSUnJFd3JCS3UrY1FtZzhaRFZseEpoaDlnRWFYQjRuQ2c9PQo=',
+        url: `https://pomoplant.io${DOWNLOAD_URL}`,
       },
     },
   });
